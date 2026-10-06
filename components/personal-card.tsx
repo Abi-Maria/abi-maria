@@ -1,20 +1,15 @@
 import { ArrowUpRight, Mail } from 'lucide-react'
 
-const credentials = [
+const focusAreas = [
   {
-    number: '20+',
-    title: 'Years in real estate',
-    description: 'Brokerage built on trust, sharp instincts, and lasting relationships.',
+    number: '01',
+    title: 'Enterprise tech sales',
+    description: 'Building trusted relationships and connecting people with technology that moves business forward.',
   },
   {
-    number: 'GGU',
-    title: 'Business major',
-    description: 'A business-first perspective that connects people and opportunity.',
-  },
-  {
-    number: 'AI',
+    number: '02',
     title: 'AI coursework',
-    description: 'Exploring what emerging technology makes possible next.',
+    description: 'Studying the ideas and tools shaping what comes next in enterprise technology.',
   },
 ]
 
@@ -27,31 +22,36 @@ export function PersonalCard() {
           <span className="wordmark-mark">AMG</span>
           <span className="wordmark-name">Abi-Maria Gomes</span>
         </a>
-        <a className="topbar-link" href="mailto:abimariagomes48@gmail.com">
-          Let&apos;s connect <ArrowUpRight aria-hidden="true" />
+        <a className="topbar-link" href="https://www.linkedin.com/in/abgomes" target="_blank" rel="noreferrer">
+          LinkedIn profile <ArrowUpRight aria-hidden="true" />
         </a>
       </header>
 
       <section className="hero" id="home" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> People, property &amp; possibility</p>
+          <p className="eyebrow"><span /> Enterprise technology · Los Angeles</p>
           <h1 id="hero-title">Abi-Maria <em>Gomes</em></h1>
-          <p className="hero-role">Real Estate Broker <span className="role-divider">&amp;</span> Enterprise Tech Sales</p>
+          <p className="hero-role">Enterprise Tech Sales <span className="role-divider">&amp;</span> AI Coursework</p>
           <p className="hero-intro">
-            Bringing people together with the experience to close today—and the curiosity to see what&apos;s next.
+            A relationship-first approach to enterprise technology sales, paired with a growing foundation in AI and a curiosity for what comes next.
           </p>
-          <a className="contact-button" href="mailto:abimariagomes48@gmail.com">
-            <Mail aria-hidden="true" />
-            <span>Get in touch</span>
-            <span className="contact-email">abimariagomes48@gmail.com</span>
-            <ArrowUpRight className="contact-arrow" aria-hidden="true" />
-          </a>
-          <div className="hero-index" aria-hidden="true"><span>01</span><span className="index-rule" /><span>THE INTRODUCTION</span></div>
+          <div className="hero-actions">
+            <a className="contact-button" href="mailto:abimariagomes48@gmail.com">
+              <Mail aria-hidden="true" />
+              <span>Get in touch</span>
+              <span className="contact-email">abimariagomes48@gmail.com</span>
+              <ArrowUpRight className="contact-arrow" aria-hidden="true" />
+            </a>
+            <a className="hero-linkedin" href="https://www.linkedin.com/in/abgomes" target="_blank" rel="noreferrer">
+              View LinkedIn <ArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
+          <div className="hero-index" aria-hidden="true"><span>01</span><span className="index-rule" /><span>TECHNOLOGY &amp; WHAT&apos;S NEXT</span></div>
         </div>
 
-        <aside className="feature-card" aria-label="A little about Abi-Maria">
+        <aside className="feature-card" aria-label="Abi-Maria's current focus">
           <div className="feature-card-top">
-            <span className="feature-label">A perspective shaped by</span>
+            <span className="feature-label">Current focus</span>
             <span className="feature-spark" aria-hidden="true" />
           </div>
           <div className="monogram-wrap" aria-hidden="true">
@@ -62,32 +62,62 @@ export function PersonalCard() {
           </div>
           <div className="feature-quote">
             <span className="quote-mark" aria-hidden="true">“</span>
-            <p>Rooted in relationships.<br /><em>Ready for what&apos;s next.</em></p>
+            <p>People-first sales.<br /><em>Future-ready thinking.</em></p>
           </div>
-          <div className="feature-footer"><span>REAL ESTATE</span><span className="footer-dot" /><span>ENTERPRISE TECHNOLOGY</span></div>
+          <div className="feature-footer"><span>ENTERPRISE TECH SALES</span><span className="footer-dot" /><span>AI COURSEWORK</span></div>
         </aside>
       </section>
 
-      <section className="credentials" aria-label="Experience and background">
-        <div className="credentials-heading">
-          <span className="section-kicker">THE BACKGROUND</span>
-          <h2>Experience with<br />a little <em>extra.</em></h2>
+      <section className="focus-section" aria-labelledby="focus-title">
+        <div className="section-heading">
+          <span className="section-kicker">THE MAIN FOCUS</span>
+          <h2 id="focus-title">Technology, <em>with people at the center.</em></h2>
         </div>
-        {credentials.map((credential, index) => (
-          <article className="credential" key={credential.title}>
-            <div className="credential-top"><span className="credential-number">{credential.number}</span><span className="credential-index">0{index + 1}</span></div>
-            <h3>{credential.title}</h3>
-            <p>{credential.description}</p>
-          </article>
-        ))}
+        <div className="focus-grid">
+          {focusAreas.map((area) => (
+            <article className="focus-item" key={area.title}>
+              <span className="focus-number">{area.number}</span>
+              <h3>{area.title}</h3>
+              <p>{area.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="history-section" aria-labelledby="history-title">
+        <div className="history-heading">
+          <span className="section-kicker">PROFESSIONAL HISTORY</span>
+          <h2 id="history-title">Experience built<br />on <em>relationships.</em></h2>
+        </div>
+        <article className="history-item">
+          <span className="history-years">20+ years</span>
+          <div>
+            <h3>Real Estate Broker</h3>
+            <p>Two decades of guiding people through meaningful property decisions, grounded in trust and long-term relationships.</p>
+          </div>
+        </article>
+        <article className="history-item history-education">
+          <span className="history-years">GGU</span>
+          <div>
+            <h3>Business Major</h3>
+            <p>A business foundation that complements a career spanning property and enterprise technology.</p>
+          </div>
+        </article>
+      </section>
+
+      <section className="personal-highlight" aria-label="Personal achievement">
+        <span className="highlight-kicker">A PERSONAL HIGHLIGHT</span>
+        <p><strong>CBS <em>Survivor</em></strong><span>Contestant · A memorable adventure beyond the boardroom.</span></p>
+        <span className="highlight-star" aria-hidden="true" />
       </section>
 
       <footer className="page-footer">
-        <span>Also: CBS <em>Survivor</em> contestant</span>
-        <span className="footer-signoff">Good people. Good places. New possibilities.</span>
-        <a href="mailto:abimariagomes48@gmail.com" aria-label="Email Abi-Maria Gomes">AMG <ArrowUpRight aria-hidden="true" /></a>
+        <span>Los Angeles, California</span>
+        <span className="footer-signoff">Good people. New possibilities.</span>
+        <a href="mailto:abimariagomes48@gmail.com" aria-label="Email Abi-Maria Gomes">Say hello <ArrowUpRight aria-hidden="true" /></a>
       </footer>
     </main>
   )
 }
+
 export default PersonalCard
