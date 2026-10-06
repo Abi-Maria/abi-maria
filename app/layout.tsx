@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Abi-Maria Gomes | Enterprise Tech Sales & AI Coursework',
+  title: 'Abi-Maria Gomes | Enterprise Tech Sales & Real Estate Broker',
   description:
-    'Meet Abi-Maria Gomes, an enterprise tech sales professional in Los Angeles pursuing AI coursework, with 20+ years as a real estate broker and a CBS Survivor appearance.',
+    'Meet Abi-Maria Gomes, a Los Angeles enterprise tech sales professional and real estate broker with 20+ years of experience, finishing GGU AI 300 and building expertise in AI workflows and agents. Two-time CBS Survivor player.',
   generator: 'v0.app',
   icons: {
     icon: [
