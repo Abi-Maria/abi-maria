@@ -67,7 +67,7 @@ export function PersonalCard() {
         <span className="survivor-label">FEATURED EXPERIENCE</span>
         <h2 id="survivor-title">CBS <em>Survivor</em> Experience</h2>
         <p className="survivor-banner">
-          <strong>2-Time Survivor Competitor: Survivor: Philippines &amp; Survivor: Cambodia — Second Chance (Voted in by America, 72 total days competed).</strong>
+          <strong>2x Survivor Competitor: Survivor Philippines &amp; Survivor Cambodia Second Chance (Voted in by America, 72 total days competed).</strong>
         </p>
       </section>
 
