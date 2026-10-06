@@ -137,13 +137,12 @@ body { margin: 0; background: var(--background); color: var(--foreground); }
 .history-number { color: #a18456; font-family: Georgia, 'Times New Roman', serif; font-size: 13px; }
 .history-row h3 { margin: 0; font-size: 12px; font-weight: 700; }
 .history-row p { margin: 0; color: var(--ink-soft); font-family: Georgia, 'Times New Roman', serif; font-size: 13px; }
-.survivor-highlight { display: grid; grid-template-columns: .72fr 1.28fr auto; align-items: center; gap: clamp(24px, 7vw, 88px); padding: 24px 27px; background: #e9e5da; }
-.survivor-label { color: #82724f; font-size: 8px; }
-.survivor-copy h2 { margin: 0 0 4px; font-family: Georgia, 'Times New Roman', serif; font-size: 25px; font-weight: 400; letter-spacing: -.03em; }
-.survivor-copy h2 em { color: #9a7740; font-weight: 400; }
-.survivor-copy p { margin: 0; color: var(--ink-soft); font-size: 11px; }
-.survivor-count { display: flex; align-items: baseline; gap: 7px; color: #987740; font-family: Georgia, 'Times New Roman', serif; font-size: 26px; }
-.survivor-count small { color: #77766f; font-family: Arial, Helvetica, sans-serif; font-size: 8px; letter-spacing: .15em; }
+.survivor-highlight { display: grid; gap: 14px; padding: clamp(25px, 4vw, 42px); background: var(--navy); color: #f8f6f0; }
+.survivor-label { color: var(--brass); font-size: 9px; }
+.survivor-highlight h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(30px, 4vw, 43px); font-weight: 400; letter-spacing: -.04em; line-height: 1.1; }
+.survivor-highlight h2 em { color: var(--brass); font-weight: 400; }
+.survivor-banner { margin: 4px 0 0; padding: 17px 20px; background: #f5f3ed; color: var(--navy); font-size: clamp(12px, 1.4vw, 15px); line-height: 1.55; }
+.survivor-banner strong { font-weight: 700; }
 .page-footer { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 14px; color: #77766f; font-size: 10px; }
 .footer-divider { padding-inline: 7px; color: #b6a276; }
 .page-footer a { display: inline-flex; align-items: center; gap: 5px; color: var(--navy); text-decoration: none; transition: color .2s ease; }
@@ -163,9 +162,9 @@ body { margin: 0; background: var(--background); color: var(--foreground); }
   .course-note { max-width: 270px; }
   .professional-history { grid-template-columns: 1fr; gap: 21px; padding: 39px 0 35px; }
   .section-heading h2 { font-size: 31px; }
-  .survivor-highlight { grid-template-columns: 1fr auto; gap: 13px 18px; padding: 19px 20px; }
-  .survivor-label { grid-column: 1 / -1; }
-  .survivor-copy h2 { font-size: 23px; }
+  .survivor-highlight { gap: 12px; padding: 22px; }
+  .survivor-highlight h2 { font-size: 29px; }
+  .survivor-banner { padding: 15px 16px; font-size: 12px; }
 }
 @media (max-width: 430px) {
   .calling-card-page { padding-inline: 17px; }
@@ -178,11 +177,9 @@ body { margin: 0; background: var(--background); color: var(--foreground); }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
   .history-row { grid-template-columns: 28px 1fr; gap: 7px 10px; padding-block: 12px; }
   .history-row p { grid-column: 2; }
-  .survivor-highlight { gap: 12px 8px; padding-inline: 15px; }
-  .survivor-copy h2 { font-size: 21px; }
-  .survivor-copy p { max-width: 205px; font-size: 10px; line-height: 1.45; }
-  .survivor-count { gap: 4px; font-size: 22px; }
-  .survivor-count small { font-size: 7px; }
+  .survivor-highlight { gap: 10px; padding: 20px 16px; }
+  .survivor-highlight h2 { font-size: 27px; }
+  .survivor-banner { padding: 13px 14px; font-size: 12px; }
   .page-footer { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {

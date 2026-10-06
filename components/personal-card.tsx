@@ -64,12 +64,11 @@ export function PersonalCard() {
       </section>
 
       <section className="survivor-highlight" aria-labelledby="survivor-title">
-        <span className="survivor-label">BEYOND THE BOARDROOM</span>
-        <div className="survivor-copy">
-          <h2 id="survivor-title">Two-time CBS <em>Survivor</em> player</h2>
-          <p><em>Survivor: Philippines</em> · Voted in by America for <em>Survivor: Second Chance</em></p>
-        </div>
-        <span className="survivor-count" aria-label="Two seasons">02 <small>SEASONS</small></span>
+        <span className="survivor-label">FEATURED EXPERIENCE</span>
+        <h2 id="survivor-title">CBS <em>Survivor</em> Experience</h2>
+        <p className="survivor-banner">
+          <strong>2-Time Survivor Player: Philippines &amp; Voted by America for Second Chance (72 total days competed).</strong>
+        </p>
       </section>
 
       <footer className="page-footer">
