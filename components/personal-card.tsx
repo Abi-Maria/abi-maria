@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, MapPin } from 'lucide-react'
+import { ArrowDownToLine, ArrowUpRight, Mail, MapPin } from 'lucide-react'
 
 export function PersonalCard() {
   return (
@@ -12,6 +12,24 @@ export function PersonalCard() {
           LinkedIn <ArrowUpRight aria-hidden="true" />
         </a>
       </header>
+
+      <section className="cover-section" aria-labelledby="cover-title">
+        <div className="cover-artwork">
+          <img src="/images/los-angeles-cover.png" alt="Los Angeles architecture and palm trees at dusk" />
+          <div className="cover-shade" aria-hidden="true" />
+          <div className="cover-content">
+            <div>
+              <p className="cover-kicker">LOS ANGELES · CALIFORNIA</p>
+              <h2 id="cover-title">Abi-Maria Gomes</h2>
+              <p className="cover-subtitle">Enterprise technology · Real estate</p>
+            </div>
+            <a className="cover-download" href="/images/los-angeles-cover.png" download="abi-maria-gomes-los-angeles-cover.png">
+              <ArrowDownToLine aria-hidden="true" />
+              <span>Download cover</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="hero-panel" aria-labelledby="hero-title">
         <div className="hero-copy">

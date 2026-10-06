@@ -96,8 +96,19 @@ body { margin: 0; background: var(--background); color: var(--foreground); }
   color: var(--navy);
   font-family: Arial, Helvetica, sans-serif;
 }
-.topbar, .hero-panel, .professional-history, .survivor-highlight, .page-footer { width: min(100%, 1192px); margin-inline: auto; }
+.topbar, .cover-section, .hero-panel, .professional-history, .survivor-highlight, .page-footer { width: min(100%, 1192px); margin-inline: auto; }
 .topbar { display: flex; height: 78px; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(20,36,64,.13); }
+.cover-section { margin-top: 27px; }
+.cover-artwork { position: relative; display: flex; min-height: clamp(250px, 31vw, 370px); align-items: end; overflow: hidden; background: var(--navy); color: #f8f6f0; }
+.cover-artwork > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.cover-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10, 25, 48, .86) 0%, rgba(10, 25, 48, .62) 45%, rgba(10, 25, 48, .08) 100%), linear-gradient(0deg, rgba(10, 25, 48, .35), transparent 60%); }
+.cover-content { position: relative; display: flex; width: 100%; align-items: end; justify-content: space-between; gap: 22px; padding: clamp(25px, 4.8vw, 58px); }
+.cover-kicker { margin: 0 0 13px; color: var(--brass); font-size: 9px; font-weight: 700; letter-spacing: .2em; }
+.cover-content h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 400; letter-spacing: -.055em; line-height: 1; }
+.cover-subtitle { margin: 13px 0 0; color: rgba(248,246,240,.82); font-family: Georgia, 'Times New Roman', serif; font-size: 15px; }
+.cover-download { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 8px; padding: 0 13px; border: 1px solid rgba(248,246,240,.7); color: #f8f6f0; font-size: 10px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background .2s ease, color .2s ease; }
+.cover-download:hover { background: #f8f6f0; color: var(--navy); }
+.cover-download svg { width: 14px; height: 14px; }
 .wordmark { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
 .wordmark-mark { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid #b79760; border-radius: 50%; font-family: Georgia, 'Times New Roman', serif; font-size: 12px; letter-spacing: -.08em; }
 .wordmark-name { font-size: 12px; font-weight: 600; letter-spacing: .03em; }
@@ -152,6 +163,11 @@ body { margin: 0; background: var(--background); color: var(--foreground); }
 @media (max-width: 760px) {
   .calling-card-page { padding-inline: 22px; }
   .topbar { height: 69px; }
+  .cover-section { margin-top: 20px; }
+  .cover-artwork { min-height: 290px; }
+  .cover-content { align-items: flex-start; flex-direction: column; gap: 20px; padding: 28px; }
+  .cover-content h2 { font-size: clamp(35px, 8vw, 47px); }
+  .cover-subtitle { font-size: 14px; }
   .hero-panel { grid-template-columns: 1fr; gap: 31px; margin-top: 24px; padding: 34px clamp(22px, 7vw, 42px); }
   .eyebrow { margin-bottom: 30px; }
   .hero-panel h1 { font-size: clamp(49px, 9vw, 64px); }
